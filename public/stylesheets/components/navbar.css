@@ -1,0 +1,17 @@
+.navbar-ch {
+  height: 130px;
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-ch-absolute {
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+.navbar-ch-logo img {
+  height: 100px;
+}

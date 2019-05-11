@@ -1,0 +1,22 @@
+.banner {
+  height: calc(100vh);
+  text-align: center;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner h1 {
+  color: #EDF5E1;
+  font-family: "Montserrat", "Helvetica", "sans-serif";
+  font-weight: bold;
+  font-size: 5em;
+  text-align: left;
+}
+
+.banner #catching-phrase {
+  margin-right: 15vw;
+}
