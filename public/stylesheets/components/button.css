@@ -1,0 +1,28 @@
+.btn-outline-primary {
+  color: #05386B;
+  border-color: #05386B;
+}
+
+.btn-outline-primary:hover {
+  background-color: #05386B;
+  border-color: #05386B;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus, .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-outline-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(5, 56, 107, .5);
+}
+
+.btn-outline-primary.focus, .btn-outline-primary:focus {
+  box-shadow: none;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #05386B;
+    border-color: #05386B;
+}
+
+.call-to-action {
+  position: absolute;
+  bottom: 30px;
+}

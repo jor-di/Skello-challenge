@@ -1,10 +1,11 @@
 /* Fonts */
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900');
 
 /* Bootstrap */
-@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css");
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
 
 /* Components */
 @import url("components/banner.css");
 @import url("components/navbar.css");
+@import url("components/button.css");

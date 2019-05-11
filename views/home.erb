@@ -1,13 +1,15 @@
 <div class="navbar-ch navbar-ch-absolute">
   <a href="/" class="navbar-ch-logo"><img src="/images/icon-with-name.png" /></a>
-  <div class="contact">Contactez-nous !</div>
+  <button type="button" class="btn btn-outline-primary">Contactez-nous !</button>
 </div>
 
-<div class="banner" style="background-color: #5CDB95;">
+<div class="banner">
   <div id="catching-phrase">
-    <h1>Il y a forcement <br>un article <br>fait pour vous</h1>
+    <h1>Lieu d'expression libre.</h1>
   </div>
+  <button type="button" class="btn btn-outline-primary btn-lg call-to-action">Découvrez notre sélection d'articles</button>
 </div>
+
 
 <ul class="list-group">
   <% @database.each_with_index do |article, index| %>

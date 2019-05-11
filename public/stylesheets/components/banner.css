@@ -3,20 +3,24 @@
   text-align: center;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-size: cover;
   background-position: center;
+  background-color: #5CDB95;
+  background-image: url('/images/background_image.png');
 }
 
 .banner h1 {
   color: #EDF5E1;
   font-family: "Montserrat", "Helvetica", "sans-serif";
   font-weight: bold;
-  font-size: 5em;
+  font-size: 6em;
   text-align: left;
+  max-width: 600px;
 }
 
 .banner #catching-phrase {
-  margin-right: 15vw;
+  width: 90vw;
 }
