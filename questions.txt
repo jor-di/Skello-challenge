@@ -4,15 +4,23 @@ These can be done in any language you're comfortable with
 1. Give a regular expression that detects hexadecimal numbers in a text.
 For example, ‘0x0f4’, ‘0acdadecf822eeff32aca5830e438cb54aa722e3’, ‘8BADF00D’ should be detected.
 
->
+> Ruby: /\b(?:0x)*\h+\b/
 
 2.Here is the pseudo code of a function that is defined recursively:
 -  f(0) = 1;
 -  f(1) = 3;
--  f(n)= 3 * f(n-1) f(n-2);
+-  f(n)= 3 * f(n-1) - f(n-2);
 Provide an implementation for ‘f’. Bonus points for a non recursive implementation.
 
->
+> Ruby:
+
+def f(num)
+  return 1 if num.zero?
+
+  return 3 if num == 1
+
+  (num - 1).times.inject([1, 3]) { |memo| memo << 3 * memo.last - memo[-2] }.last
+end
 
 BACKEND - MySQL
 
@@ -24,11 +32,24 @@ BACKEND - MySQL
   - email,
   - created_at
 
->
+> MySQL Query:
+
+CREATE TABLE IF NOT EXISTS users (
+id integer PRIMARY KEY AUTO_INCREMENT NOT NULL,
+firstname VARCHAR(255),
+lastname VARCHAR(255),
+gender VARCHAR(255),
+email VARCHAR(255),
+created_at DATETIME NOT NULL
+);
 
 2. Write a query on the previous table that lists the 10 most recently added users.
 
->
+> MySQL Query:
+
+SELECT * FROM users
+ORDER BY created_at DESC
+LIMIT 10;
 
 GENERAL - Creativity
 Si vous êtes Français, vous pouvez répondre en Français.
@@ -37,6 +58,31 @@ Si vous êtes Français, vous pouvez répondre en Français.
 
 >
 
+Je commencerais par demander à la personne si elle a toujours été aveugle. Si oui, je lui demanderais si elle a une perception de la luminosité malgré son handicap. Cela me permettrait de lui décrire le jaune comme une couleur lumineuse.
+
+J'identifierais également le jaune à la sensation agréable de chaleur sur la peau lorsqu'il y a du soleil. Je dirais à la personne que le jaune est la couleur la plus représentative du feu.
+
+J'évoquerais aussi l'été et l'odeur de fleurs comme le tournesol, le mimosa ou les jonquilles.  
+
+Je lui dirais enfin que cette couleur est souvent associée au bonheur et à la chaleur intérieure. 
+
+
 3. Describe the data model you’d use for a Battleship game. What are the key objects? How will your code use them?
 
 >
+
+Le modèle de données : 
+- une classe Grid représentant la grille sur laquelle seront placés les navires d'un joueur. Cette grille peut être représentée par un hash contenant le nom des cellules en clés (A1, B2,...), et l'éventuel identifiant du navire placé sur cette cellule en valeur.
+- une classe Player représentant chacun des 2 joueurs de la partie. Chaque joueur a une grille Grid (1:N).
+- une classe Ships représentant les navires d'une grille. Chaque navire appartient a une grille Grid (1:N). Chaque navire a une longueur, et un état initialement égal à cette longueur.
+- une classe Missile, représentant chaque attaque d'un joueur à l'adversaire. Chaque missile appartient à une Grille Grid (1:N).
+
+Utilisation par le code :
+- Deux phases composent le jeu. La phase d'initialisation et la phase de bataille.
+  - Phase d'initialisation :
+    - Deux joueurs sont créés, et avec eux leur grille.
+    - Chaque joueur initialise la position de ses navires sur sa grille. Il donne en paramètre le type de navire (dont dépend sa longueur), et l'emplacement souhaité sur la grille (contraint par des règles de placement).
+  - Phase de bataille :
+    - Chacun leur tour, les joueurs crééent une instance de Missile, avec en paramètre la position sur la grille à laquelle ils souhaitent attaquer.
+    - Si à cet emplacement de la grille un navire est présent, alors son identifiant est retiré de la cellule et l'état du navire est décrémenté de 1. Une fonction contenue dans la classe Ships renvoie 'touché' ou 'coulé' selon que cet état soit supérieur ou égal à 0.
+    - Fin de partie : Un joueur gagne lorsque la grille de son adversaire ne contient plus d'identifiant de navire (grille vide).
