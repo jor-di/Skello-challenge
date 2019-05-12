@@ -58,9 +58,9 @@ Si vous êtes Français, vous pouvez répondre en Français.
 
 >
 
-Je commencerais par demander à la personne si elle a toujours été aveugle. Si oui, je lui demanderais si elle a une perception de la luminosité malgré son handicap. Cela me permettrait de lui décrire le jaune comme une couleur lumineuse.
+Je commencerais par demander à la personne si elle a toujours été aveugle. Si oui, je lui demanderais si elle a une perception de la luminosité malgré son handicap : cela me permettrait de lui décrire le jaune comme une couleur lumineuse.
 
-J'identifierais également le jaune à la sensation agréable de chaleur sur la peau lorsqu'il y a du soleil. Je dirais à la personne que le jaune est la couleur la plus représentative du feu.
+J'évoquerais ensuite ses autres sens. Je lui parlerais de la sensation agréable de chaleur sur la peau lorsqu'il y a du soleil. Je lui dirais que le jaune est la couleur la plus représentative du feu.
 
 J'évoquerais aussi l'été et l'odeur de fleurs comme le tournesol, le mimosa ou les jonquilles.  
 
@@ -72,7 +72,7 @@ Je lui dirais enfin que cette couleur est souvent associée au bonheur et à la 
 >
 
 Le modèle de données : 
-- une classe Grid représentant la grille sur laquelle seront placés les navires d'un joueur. Cette grille peut être représentée par un hash contenant le nom des cellules en clés (A1, B2,...), et l'éventuel identifiant du navire placé sur cette cellule en valeur.
+- une classe Grid représentant la grille sur laquelle seront placés les navires d'un joueur. Cette grille peut être représentée par un hash contenant le nom des cellules en clés (A1, B2,...), et l'éventuel identifiant d'un navire placé sur cette cellule en valeur.
 - une classe Player représentant chacun des 2 joueurs de la partie. Chaque joueur a une grille Grid (1:N).
 - une classe Ships représentant les navires d'une grille. Chaque navire appartient a une grille Grid (1:N). Chaque navire a une longueur, et un état initialement égal à cette longueur.
 - une classe Missile, représentant chaque attaque d'un joueur à l'adversaire. Chaque missile appartient à une Grille Grid (1:N).
