@@ -1,3 +1,6 @@
+.card-body {
+  min-width: 0px;
+}
 .card-product {
   overflow: hidden;
   background: white;
@@ -5,6 +8,7 @@
   display: flex;
   align-items: center;
   margin: 10px;
+  width: 100%;
 }
 
 .card-product img {
@@ -29,10 +33,12 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+  min-width: 0px;
 }
 
 .card-content-preview {
-  max-width: 200px;
+  width: 100%;
+  max-width: 600px;
   display: block;
   color: #379683;
 }
