@@ -2,6 +2,12 @@ require "sinatra"
 require "sinatra/reloader" if development?
 require_relative "database"
 
+helpers do
+  def partial(template, locals = {})
+    erb(template, layout: false, locals: locals)
+  end
+end
+
 get "/" do
   @database = DB
   erb :home

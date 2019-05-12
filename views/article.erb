@@ -12,13 +12,7 @@
     <h2>Commentaires</h2>
     <div class="container">
       <% @comments.each do |comment| %>
-        <div class="card-comment">
-          <img src='' class="avatar-large"/>
-          <div class="card-comment-content">
-            <p><small>xx</small></p>
-            <p><%= comment %></p>
-          </div>
-        </div>
+        <%= partial(:'_comment', comment: comment) %>
       <% end %>
     </div>
   </div>
