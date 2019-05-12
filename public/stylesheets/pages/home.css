@@ -1,0 +1,38 @@
+.parallax{
+    background-image: url("https://images.pexels.com/photos/349608/pexels-photo-349608.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+    min-height: 50vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+#parallax-text{
+  color: #379683;
+  text-align: center;
+  top: 120vh;
+  position: absolute;
+  max-width: 500px;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+h2.articles-section {
+  color: #5CDB95;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+  padding: 30px;
+}
+
+.articles-container {
+  padding-bottom: 30px;
+}

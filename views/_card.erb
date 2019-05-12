@@ -3,7 +3,7 @@
     <img src="<%= article[:photo] || 'https://unsplash.it/600?image=8'%>">
     <div class="card-product-infos">
       <h2><%= article[:title] %></h2>
-      <a href="/articles/<%= index %>" class="card-content-preview text-truncate"><%= article[:content] %></a>
+      <a href="/articles/<%= article[:id] %>" class="card-content-preview text-truncate"><%= article[:content] %></a>
     </div>
   </div>
 </div>
