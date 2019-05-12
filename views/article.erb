@@ -1,8 +1,10 @@
-<h1><%= @article[:title] %></h1>
-<ul class="list-group">
-  <% @comments.each do |comment| %>
-    <li class="list-group-item">
-      <%= comment %>
-    </li>
-  <% end %>
-</ul>
+  <div class="header-article" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @article[:photo].gsub('600','1600') %>)">
+    <h1><%= @article[:title] %></h1>
+  </div>
+  <ul class="list-group">
+    <% @comments.each do |comment| %>
+      <li class="list-group-item">
+        <%= comment %>
+      </li>
+    <% end %>
+  </ul>
