@@ -1,0 +1,13 @@
+.article-content {
+  padding: 30px;
+  text-align: justify;
+}
+
+.article-comments {
+  margin-top: 30px;
+}
+
+.article-comments h2 {
+  color: #379683;
+  font-size: 1.8em;
+}

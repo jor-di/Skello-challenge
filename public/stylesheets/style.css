@@ -11,6 +11,10 @@
 @import url("components/button.css");
 @import url("components/card.css");
 @import url("components/header.css");
+@import url("components/avatar.css");
+
+/* Pages */
+@import url("pages/article.css");
 
 body {
   font-family: "Montserrat", "Helvetica", "sans-serif";

@@ -40,3 +40,27 @@
 .card-content-preview:hover {
   color: rgba(55,150,131, .8);
 }
+
+.card-comment {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  background: white;
+  padding: 8px 16px;
+  border: 1px solid rgb(235,235,235);
+}
+
+.card-comment .card-comment-content {
+  flex-grow: 1;
+  padding: 0 24px;
+}
+
+.card-comment p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.card-comment small {
+  color: #379683;
+  font-weight: bold;
+}

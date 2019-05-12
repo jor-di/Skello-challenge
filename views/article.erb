@@ -1,10 +1,25 @@
-  <div class="header-article" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @article[:photo].gsub('600','1600') %>)">
+  <div class="header-article" style="background-image: linear-gradient(rgba(255,255,255,0.15), rgba(255,255,255,0.3)), url(<%= @article[:photo].gsub('600','1600') %>)">
     <h1><%= @article[:title] %></h1>
   </div>
-  <ul class="list-group">
-    <% @comments.each do |comment| %>
-      <li class="list-group-item">
-        <%= comment %>
-      </li>
-    <% end %>
+  <div class="text-center">
+    <p>Ecrit par : - Temps de lecture : </p>
+  </div>
+  <div class="article-content">
+    <%= @article[:content] %>
+  </div>
+
+  <div class="article-comments">
+    <h2>Commentaires</h2>
+    <div class="container">
+      <% @comments.each do |comment| %>
+        <div class="card-comment">
+          <img src='' class="avatar-large"/>
+          <div class="card-comment-content">
+            <p><small>xx</small></p>
+            <p><%= comment %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
   </ul>
