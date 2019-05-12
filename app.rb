@@ -9,15 +9,15 @@ helpers do
   end
 end
 
-DB.each_with_index do |art, ind|
+database = DB.each_with_index do |art, ind|
   art[:comments] = COMMENTS[ind].size
   art[:id] = ind
 end
 
 get "/" do
-  @articles = DB
-  @top_commented_articles = DB.sort_by! { |article| article[:comments] || 0 }.reverse
-  @top_rated_articles = DB.sort_by! { |article| article[:rating] || "0" }.reverse
+  @last_articles = database.reverse
+  @top_commented_articles = database.sort_by { |article| article[:comments] || 0 }.reverse
+  @top_rated_articles = database.sort_by { |article| article[:rating] || "0" }.reverse
   erb :home
 end
 
