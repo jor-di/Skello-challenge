@@ -13,12 +13,16 @@
   margin-bottom: 15px;
 }
 
-.article-infos {
+.article-info {
   margin: 0px 5px;
 }
 
 #article-title {
   color: #05386B;
   font-weight: 700;
-/*  text-shadow: 2px 2px 3px rgba(0,0,0,0.3);*/
+}
+
+.article-block {
+  margin-top: 20px;
+  max-width: 1200px;
 }

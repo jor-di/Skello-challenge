@@ -1,23 +1,22 @@
-  <div class="header-article" style="background-image: linear-gradient(rgba(255,255,255,0.15), rgba(255,255,255,0.3)), url(<%= @photo %>)">
-  </div>
-  <h1 id="article-title" class="text-center"><%= @article[:title] %></h1>
-  <div class="text-center">
-      <span class="article-infos" id="author"></span>
-      <span class="article-infos" id=lecture_time><i class="far fa-clock"></i> <%= @lecture_time %> sec</span>
-      <% if @article[:rating] %>
-         - <span class="article-infos" id="rating"><i class="fas fa-star"></i> <%= '%.1f' % @article[:rating] %></span>
-      <% end %>
-  </div>
-  <div class="article-content">
-    <%= @article[:content] %>
-  </div>
+<div class="container">
+  <div class="row">
+    <div class="article-block col-xs-12 col-md-6">
+      <h1 id="article-title" class="text-center"><%= @article[:title] %></h1>
+      <div class="header-article" style="background-image: linear-gradient(rgba(255,255,255,0.15), rgba(255,255,255,0.3)), url(<%= @photo %>)">
+      </div>
+      <div class="text-center">
+          <%= partial(:'_article_infos', {article: @article, lecture_time: @lecture_time}) %>
+      </div>
+      <div class="article-content">
+        <%= @article[:content] %>
+      </div>
+    </div>
 
-  <div class="article-comments">
-    <h2>Commentaires</h2>
-    <div class="container">
+    <div class="article-comments col-xs-12 col-md-4 offset-md-1">
+      <h2>Commentaires</h2>
       <% @comments.each do |comment| %>
         <%= partial(:'_comment', comment: comment) %>
       <% end %>
     </div>
   </div>
-  </ul>
+</div>

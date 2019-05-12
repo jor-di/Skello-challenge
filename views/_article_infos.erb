@@ -1,0 +1,5 @@
+<span class="article-info" id="author"></span>
+<span class="article-info" id=lecture_time><i class="far fa-clock"></i> <%= lecture_time %> sec</span>
+<% if article[:rating] %>
+   - <span class="article-info" id="rating"><i class="fas fa-star"></i> <%= '%.1f' % article[:rating] %></span>
+<% end %>
