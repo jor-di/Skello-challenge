@@ -1,8 +1,12 @@
   <div class="header-article" style="background-image: linear-gradient(rgba(255,255,255,0.15), rgba(255,255,255,0.3)), url(<%= @photo %>)">
-    <h1><%= @article[:title] %></h1>
   </div>
+  <h1 id="article-title" class="text-center"><%= @article[:title] %></h1>
   <div class="text-center">
-    <p>Ecrit par : <span id="author"></span> - Temps de lecture : <%= @lecture_time %> sec</p>
+      <span class="article-infos" id="author"></span>
+      <span class="article-infos" id=lecture_time><i class="far fa-clock"></i> <%= @lecture_time %> sec</span>
+      <% if @article[:rating] %>
+         - <span class="article-infos" id="rating"><i class="fas fa-star"></i> <%= '%.1f' % @article[:rating] %></span>
+      <% end %>
   </div>
   <div class="article-content">
     <%= @article[:content] %>

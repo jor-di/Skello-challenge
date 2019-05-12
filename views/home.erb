@@ -8,15 +8,7 @@
 <div class="container" id = "articles-container">
   <div class="row">
     <% @database.each_with_index do |article, index| %>
-      <div class="col-12 col-lg-6">
-        <div class="card-product">
-          <img src="<%= article[:photo] || 'https://unsplash.it/600?image=8'%>">
-          <div class="card-product-infos">
-            <h2><%= article[:title] %></h2>
-            <a href="/articles/<%= index %>" class="card-content-preview text-truncate"><%= article[:content] %></a>
-          </div>
-        </div>
-      </div>
+      <%= partial(:'_card', {article: article, index: index}) %>
     <% end %>
   </div>
 </div>

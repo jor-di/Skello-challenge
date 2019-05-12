@@ -6,7 +6,8 @@ const initAuthor = () => {
   fetch('https://uinames.com/api/?ext&region=france')
       .then(response => response.json())
       .then((data) => {
-        author.innerHTML = `${data.name} ${data.surname}`;
+        author.innerHTML = `<i class="fas fa-signature"></i> ${data.name} ${data.surname}`;
+        author.insertAdjacentHTML('afterEnd', ' - ');
       })
 }
 

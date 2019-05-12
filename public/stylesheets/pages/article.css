@@ -12,3 +12,13 @@
   font-size: 1.8em;
   margin-bottom: 15px;
 }
+
+.article-infos {
+  margin: 0px 5px;
+}
+
+#article-title {
+  color: #05386B;
+  font-weight: 700;
+/*  text-shadow: 2px 2px 3px rgba(0,0,0,0.3);*/
+}
