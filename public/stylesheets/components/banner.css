@@ -23,3 +23,8 @@
 .banner #catching-phrase {
   width: 90vw;
 }
+
+.call-to-action {
+  position: absolute;
+  bottom: 30px;
+}
