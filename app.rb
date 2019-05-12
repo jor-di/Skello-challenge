@@ -15,6 +15,7 @@ end
 
 get '/articles/:id' do
   @article = DB[params[:id].to_i]
+  @photo = @article[:photo].nil? ? 'https://unsplash.it/1600?image=8' : @article[:photo].gsub('600', '1600')
   @comments = COMMENTS[params[:id].to_i]
   erb :article
 end
