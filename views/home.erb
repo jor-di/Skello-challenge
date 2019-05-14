@@ -2,35 +2,19 @@
   <div id="catching-phrase">
     <h1>Lieu d'expression libre.</h1>
   </div>
-  <a class="btn btn-outline-primary btn-lg call-to-action" href="#articles-anchor">Découvrez notre sélection d'articles</a>
+  <a class="btn btn-outline-primary btn-lg call-to-action" href="#articles-anchor">
+    Découvrez notre sélection d'articles
+  </a>
 </div>
 
 <h2 id="parallax-text">"La cahute a déjà fait couler beaucoup d'encre. Rejoignez-nous vite !"</h2>
 <div class="parallax"></div>
 
-<h2 class = "articles-section" id="articles-anchor">Les derniers articles</h2>
-<div class="container articles-container">
-  <div class="row">
-    <% @last_articles.each_with_index do |article, index| %>
-      <%= partial(:'_card', {article: article, index: index}) %>
-    <% end %>
-  </div>
-</div>
+<%= partial(:'_article_section', {section_title: 'Les derniers articles',
+                                  articles: @last_articles}) %>
 
-<h2 class = "articles-section" id="articles-anchor">Les mieux notés</h2>
-<div class="container articles-container">
-  <div class="row">
-    <% @top_rated_articles.each_with_index do |article, index| %>
-      <%= partial(:'_card', {article: article, index: index}) %>
-    <% end %>
-  </div>
-</div>
+<%= partial(:'_article_section', {section_title: 'Les mieux notés',
+                                  articles: @top_rated_articles}) %>
 
-<h2 class = "articles-section" id="articles-anchor">Les plus populaires</h2>
-<div class="container articles-container">
-  <div class="row">
-    <% @top_commented_articles.each_with_index do |article, index| %>
-      <%= partial(:'_card', {article: article, index: index}) %>
-    <% end %>
-  </div>
-</div>
+<%= partial(:'_article_section', {section_title: 'Les plus populaires',
+                                  articles: @top_commented_articles}) %>

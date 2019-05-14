@@ -1,0 +1,8 @@
+<h2 class = "articles-section" id="articles-anchor"><%= section_title %></h2>
+<div class="container articles-container">
+  <div class="row">
+    <% articles.each_with_index do |article, index| %>
+      <%= partial(:'_card', {article: article, index: index}) %>
+    <% end %>
+  </div>
+</div>
